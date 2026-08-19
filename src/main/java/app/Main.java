@@ -7,37 +7,50 @@ import util.PedidoExpress;
 
 public class Main {
     public static void main(String[] args) {
-    System.out.println("Iniiando programa");
+    System.out.println("Iniciando programa");
+    //El orden de llenado de los pedidos es idPedido, direccionEntrega, tipoPedido, distanciaKilometros.
 
-    PedidoComida pedido1 = new PedidoComida();
-        pedido1.asignarRepartidor("1", "calle Freire 123", "Comida");
+    PedidoComida pedido1 = new PedidoComida(1, "calle Freire 123", "Comida", 2);
+        /*pedido1.asignarRepartidor();
         System.out.println("Pedido completado");
+        System.out.println("-----------------------------------");*/
+        pedido1.mostrarResumen();
         System.out.println("-----------------------------------");
-
-        pedido1.asignarRepartidor("2", "calle Freire 456", "Comida", "Juan Carlos Parraguez");
-        System.out.println("Pedido completado");
+        pedido1.mostrarTiempoEntrega();
         System.out.println("-----------------------------------");
-
-
-
-    PedidoEnmienda pedido2 = new PedidoEnmienda();
-        pedido2.asignarRepartidor("3", "calle Freire 789", "Enmienda");
-        System.out.println("Pedido completado");
-        System.out.println("-----------------------------------");
-
-        pedido2.asignarRepartidor("4", "calle Blanco 123", "Enmienda", "Ana Maria Garcia");
+        pedido1.asignarRepartidor("Juan Carlos Parraguez");
         System.out.println("Pedido completado");
         System.out.println("-----------------------------------");
 
 
-    PedidoExpress pedido3 = new PedidoExpress();
-        pedido3.asignarRepartidor("5", "calle Blanco 456", "Express");
+
+
+    PedidoEnmienda pedido2 = new PedidoEnmienda(2, "calle Freire 789", "Enmienda", 4.5);
+        /*pedido2.asignarRepartidor();
+        System.out.println("Pedido completado");
+        System.out.println("-----------------------------------");*/
+        pedido2.mostrarResumen();
+        System.out.println("-----------------------------------");
+        pedido2.mostrarTiempoEntrega();
+        System.out.println("-----------------------------------");
+        pedido2.asignarRepartidor("Ana Maria Garcia");
         System.out.println("Pedido completado");
         System.out.println("-----------------------------------");
 
-        pedido3.asignarRepartidor("6", "calle Blanco 789","Express","Pedro Rodrigo Perez");
+
+
+    PedidoExpress pedido3 = new PedidoExpress(3, "calle Blanco 456", "Express", 7);
+        /*pedido3.asignarRepartidor();
+        System.out.println("Pedido completado");
+        System.out.println("-----------------------------------");*/
+        pedido3.mostrarResumen();
+        System.out.println("-----------------------------------");
+        pedido3.mostrarTiempoEntrega();
+        System.out.println("-----------------------------------");
+        pedido3.asignarRepartidor("Pedro Rodrigo Perez");
         System.out.println("Pedido completado");
         System.out.println("-----------------------------------");
+
 
 
 
